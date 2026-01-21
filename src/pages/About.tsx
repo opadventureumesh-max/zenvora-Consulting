@@ -7,40 +7,34 @@ import { ArrowRight, Target, Eye, Phone } from "lucide-react";
 
 const teamMembers = [
   {
-    name: "Rahul Sharma",
-    role: "Founder & CEO",
-    phone: "+91 98765 43210",
-    image: "RS",
+    name: "Jay Prakash Upadhyay",
+    role: "Founder",
+    phone: "+91 88733 04211",
+    image: "JP",
   },
   {
-    name: "Priya Patel",
-    role: "Technical Lead",
-    phone: "+91 98765 43211",
-    image: "PP",
+    name: "Umesh Farkade",
+    role: "Executor Head",
+    phone: "+91 82258 11142",
+    image: "UF",
   },
   {
-    name: "Amit Kumar",
-    role: "Project Manager",
-    phone: "+91 98765 43212",
+    name: "Ranjeet Chaurasiya",
+    role: "Social Media Manager",
+    phone: "+91 73248 40640",
+    image: "RC",
+  },
+  {
+    name: "Ankit Kumar",
+    role: "Developer Team Head",
+    phone: "+91 62079 88050",
     image: "AK",
   },
   {
-    name: "Neha Singh",
-    role: "Research Head",
-    phone: "+91 98765 43213",
-    image: "NS",
-  },
-  {
-    name: "Vikash Gupta",
-    role: "Marketing Lead",
-    phone: "+91 98765 43214",
-    image: "VG",
-  },
-  {
-    name: "Anita Verma",
-    role: "Content Specialist",
-    phone: "+91 98765 43215",
-    image: "AV",
+    name: "Ishan Sharma",
+    role: "Developer Team Head",
+    phone: "+91 88396 24380",
+    image: "IS",
   },
 ];
 
@@ -83,10 +77,10 @@ const About = () => {
                 Our Story
               </span>
               <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
-                Building Success Stories Since 2014
+                Building Success Stories Since 2022
               </h2>
               <p className="text-muted-foreground mb-4">
-                ConsultPro was founded with a simple mission: to provide comprehensive consulting solutions that empower businesses and individuals to reach their full potential. Over the years, we have grown into a trusted partner for hundreds of clients across various industries.
+                ZENVORA CONSULTING was founded with a simple mission: to provide comprehensive consulting solutions that empower businesses and individuals to reach their full potential. In just 3 years, we have grown into a trusted partner for 50+ clients across various industries.
               </p>
               <p className="text-muted-foreground mb-6">
                 Our team brings together expertise from technology, research, marketing, and business consulting to deliver holistic solutions tailored to your unique needs. We believe in building long-term relationships based on trust, transparency, and tangible results.
@@ -110,19 +104,19 @@ const About = () => {
               className="grid grid-cols-2 gap-6"
             >
               <div className="p-6 rounded-xl bg-card border border-border shadow-sm">
-                <p className="text-4xl font-bold text-gold mb-2">10+</p>
+                <p className="text-4xl font-bold text-gold mb-2">3+</p>
                 <p className="text-muted-foreground">Years of Experience</p>
               </div>
               <div className="p-6 rounded-xl bg-card border border-border shadow-sm">
-                <p className="text-4xl font-bold text-gold mb-2">500+</p>
+                <p className="text-4xl font-bold text-gold mb-2">50+</p>
                 <p className="text-muted-foreground">Happy Clients</p>
               </div>
               <div className="p-6 rounded-xl bg-card border border-border shadow-sm">
-                <p className="text-4xl font-bold text-gold mb-2">1000+</p>
+                <p className="text-4xl font-bold text-gold mb-2">40+</p>
                 <p className="text-muted-foreground">Projects Completed</p>
               </div>
               <div className="p-6 rounded-xl bg-card border border-border shadow-sm">
-                <p className="text-4xl font-bold text-gold mb-2">50+</p>
+                <p className="text-4xl font-bold text-gold mb-2">5</p>
                 <p className="text-muted-foreground">Team Members</p>
               </div>
             </motion.div>

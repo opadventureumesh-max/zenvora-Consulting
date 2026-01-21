@@ -20,7 +20,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6 }}
           >
             <span className="inline-block px-4 py-2 bg-gold/20 text-gold rounded-full text-sm font-medium mb-6">
-              Trusted by 500+ Clients Worldwide
+              Trusted by 50+ Clients Worldwide
             </span>
           </motion.div>
 
@@ -66,7 +66,7 @@ const HeroSection = () => {
               className="gap-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-base px-8"
               asChild
             >
-              <a href="tel:+911234567890">
+              <a href="tel:+918225811142">
                 <Phone className="w-5 h-5" />
                 Contact Us
               </a>
@@ -81,11 +81,11 @@ const HeroSection = () => {
             className="flex flex-wrap gap-8 mt-12 pt-8 border-t border-primary-foreground/10"
           >
             <div>
-              <p className="text-3xl font-bold text-gold">500+</p>
+              <p className="text-3xl font-bold text-gold">50+</p>
               <p className="text-sm text-primary-foreground/60">Happy Clients</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-gold">1000+</p>
+              <p className="text-3xl font-bold text-gold">40+</p>
               <p className="text-sm text-primary-foreground/60">Projects Completed</p>
             </div>
             <div>
@@ -93,7 +93,7 @@ const HeroSection = () => {
               <p className="text-sm text-primary-foreground/60">Services Offered</p>
             </div>
             <div>
-              <p className="text-3xl font-bold text-gold">10+</p>
+              <p className="text-3xl font-bold text-gold">3+</p>
               <p className="text-sm text-primary-foreground/60">Years Experience</p>
             </div>
           </motion.div>

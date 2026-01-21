@@ -27,10 +27,10 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-6">
               <div className="w-10 h-10 rounded-lg bg-gold flex items-center justify-center">
-                <span className="text-secondary-foreground font-serif font-bold text-xl">C</span>
+                <span className="text-secondary-foreground font-serif font-bold text-xl">Z</span>
               </div>
               <span className="font-serif text-xl font-bold">
-                Consult<span className="text-gold">Pro</span>
+                ZENVORA<span className="text-gold"> CONSULTING</span>
               </span>
             </div>
             <p className="text-primary-foreground/70 text-sm leading-relaxed mb-6">
@@ -94,24 +94,21 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <Phone className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
                 <div>
-                  <a href="tel:+911234567890" className="text-sm text-primary-foreground/70 hover:text-gold transition-colors block">
-                    +91 123 456 7890
-                  </a>
-                  <a href="tel:+910987654321" className="text-sm text-primary-foreground/70 hover:text-gold transition-colors block">
-                    +91 098 765 4321
+                  <a href="tel:+918225811142" className="text-sm text-primary-foreground/70 hover:text-gold transition-colors block">
+                    +91 82258 11142
                   </a>
                 </div>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-gold flex-shrink-0" />
-                <a href="mailto:info@consultpro.com" className="text-sm text-primary-foreground/70 hover:text-gold transition-colors">
-                  info@consultpro.com
+                <a href="mailto:info@zenvoraconsulting.com" className="text-sm text-primary-foreground/70 hover:text-gold transition-colors">
+                  info@zenvoraconsulting.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
                 <span className="text-sm text-primary-foreground/70">
-                  New Delhi, India
+                  India
                 </span>
               </li>
             </ul>
@@ -124,7 +121,7 @@ const Footer = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-primary-foreground/60">
-              © {new Date().getFullYear()} ConsultPro. All rights reserved.
+              © {new Date().getFullYear()} ZENVORA CONSULTING. All rights reserved.
             </p>
             <div className="flex gap-6">
               <Link to="#" className="text-sm text-primary-foreground/60 hover:text-gold transition-colors">

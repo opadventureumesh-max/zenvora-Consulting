@@ -22,10 +22,10 @@ const Header = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-serif font-bold text-xl">C</span>
+              <span className="text-primary-foreground font-serif font-bold text-xl">Z</span>
             </div>
             <span className="font-serif text-xl font-bold text-foreground">
-              Consult<span className="text-gold">Pro</span>
+              ZENVORA<span className="text-gold"> CONSULTING</span>
             </span>
           </Link>
 
@@ -49,13 +49,13 @@ const Header = () => {
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
             <Button variant="outline" size="sm" className="gap-2" asChild>
-              <a href="tel:+911234567890">
+              <a href="tel:+918225811142">
                 <Phone className="w-4 h-4" />
                 Call Now
               </a>
             </Button>
             <Button size="sm" className="gap-2 bg-gold hover:bg-gold-dark text-secondary-foreground shadow-gold" asChild>
-              <a href="https://wa.me/911234567890" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/918225811142" target="_blank" rel="noopener noreferrer">
                 <MessageCircle className="w-4 h-4" />
                 WhatsApp
               </a>
@@ -99,13 +99,13 @@ const Header = () => {
               ))}
               <div className="flex flex-col gap-2 pt-4 border-t border-border">
                 <Button variant="outline" size="sm" className="gap-2 w-full" asChild>
-                  <a href="tel:+911234567890">
+                  <a href="tel:+918225811142">
                     <Phone className="w-4 h-4" />
                     Call Now
                   </a>
                 </Button>
                 <Button size="sm" className="gap-2 w-full bg-gold hover:bg-gold-dark text-secondary-foreground" asChild>
-                  <a href="https://wa.me/911234567890" target="_blank" rel="noopener noreferrer">
+                  <a href="https://wa.me/918225811142" target="_blank" rel="noopener noreferrer">
                     <MessageCircle className="w-4 h-4" />
                     WhatsApp
                   </a>
