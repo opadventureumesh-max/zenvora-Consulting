@@ -63,7 +63,7 @@ const HeroSection = () => {
             <Button
               size="lg"
               variant="outline"
-              className="gap-2 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-base px-8"
+              className="gap-2 border-gold text-gold hover:bg-gold hover:text-secondary-foreground text-base px-8 font-semibold"
               asChild
             >
               <a href="tel:+918225811142">
