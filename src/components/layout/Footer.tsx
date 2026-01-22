@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
+import zenvoraLogo from "@/assets/zenvora-logo.png";
 
 const services = [
   "Web & App Development",
@@ -25,10 +26,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div>
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-gold flex items-center justify-center">
-                <span className="text-secondary-foreground font-serif font-bold text-xl">Z</span>
-              </div>
+            <div className="flex items-center gap-3 mb-6">
+              <img src={zenvoraLogo} alt="Zenvora Consulting" className="h-12 w-auto" />
               <span className="font-serif text-xl font-bold">
                 ZENVORA<span className="text-gold"> CONSULTING</span>
               </span>

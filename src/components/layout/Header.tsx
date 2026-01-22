@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, MessageCircle } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import zenvoraLogo from "@/assets/zenvora-logo.png";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -20,11 +21,9 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-serif font-bold text-xl">Z</span>
-            </div>
-            <span className="font-serif text-xl font-bold text-foreground">
+          <Link to="/" className="flex items-center gap-3">
+            <img src={zenvoraLogo} alt="Zenvora Consulting" className="h-12 w-auto" />
+            <span className="font-serif text-xl font-bold text-foreground hidden sm:block">
               ZENVORA<span className="text-gold"> CONSULTING</span>
             </span>
           </Link>
