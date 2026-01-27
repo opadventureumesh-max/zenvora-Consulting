@@ -2,9 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import heroBgVideo from "@/assets/hero-bg-video.mp4";
-import heroConsultation from "@/assets/hero-consultation.png";
 
 const HeroSection = () => {
   return (
@@ -30,8 +28,7 @@ const HeroSection = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="max-w-xl">
+        <div className="max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -114,41 +111,6 @@ const HeroSection = () => {
               <p className="text-3xl font-bold text-gold">3+</p>
               <p className="text-sm text-primary-foreground/60">Years Experience</p>
             </div>
-          </motion.div>
-          </div>
-
-          {/* Hero Image with Click Animation */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="hidden lg:flex justify-center items-center"
-          >
-            <motion.img
-              src={heroConsultation}
-              alt="Business Consultation"
-              className="w-full max-w-md cursor-pointer hoverable drop-shadow-2xl"
-              whileHover={{ 
-                scale: 1.05,
-                rotate: [0, -2, 2, -2, 0],
-                transition: { duration: 0.5 }
-              }}
-              whileTap={{ 
-                scale: 0.95,
-                rotate: 0,
-                transition: { duration: 0.1 }
-              }}
-              animate={{
-                y: [0, -10, 0],
-              }}
-              transition={{
-                y: {
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }
-              }}
-            />
           </motion.div>
         </div>
       </div>
