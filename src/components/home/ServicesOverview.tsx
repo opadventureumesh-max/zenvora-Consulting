@@ -76,17 +76,43 @@ const ServicesOverview = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group bg-card rounded-xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-border hover:border-gold/30"
+              whileHover={{ 
+                y: -8,
+                transition: { duration: 0.3 }
+              }}
+              className="group relative bg-card rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-border overflow-hidden hoverable"
             >
-              <div className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mb-4 group-hover:bg-gold transition-colors">
-                <service.icon className="w-7 h-7 text-gold group-hover:text-secondary-foreground transition-colors" />
+              {/* Animated gradient background on hover */}
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-br from-gold/20 via-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                initial={{ x: "-100%", opacity: 0 }}
+                whileHover={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              />
+              
+              {/* Sliding border effect */}
+              <motion.div
+                className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-gold via-gold-light to-gold"
+                initial={{ width: "0%" }}
+                whileHover={{ width: "100%" }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+              />
+              
+              <div className="relative z-10">
+                <motion.div 
+                  className="w-14 h-14 rounded-xl bg-gold/10 flex items-center justify-center mb-4 group-hover:bg-gold transition-colors duration-300"
+                  whileHover={{ rotate: [0, -10, 10, -10, 0], scale: 1.1 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <service.icon className="w-7 h-7 text-gold group-hover:text-secondary-foreground transition-colors duration-300" />
+                </motion.div>
+                <h3 className="font-serif text-xl font-semibold text-foreground mb-2 group-hover:text-gold transition-colors duration-300">
+                  {service.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {service.description}
+                </p>
               </div>
-              <h3 className="font-serif text-xl font-semibold text-foreground mb-2">
-                {service.title}
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                {service.description}
-              </p>
             </motion.div>
           ))}
         </div>

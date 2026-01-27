@@ -34,13 +34,27 @@ const Header = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium transition-colors hover:text-gold ${
-                  location.pathname === link.path
-                    ? "text-gold"
-                    : "text-muted-foreground"
-                }`}
+                className="relative group"
               >
-                {link.name}
+                <motion.span
+                  className={`text-sm font-medium transition-colors group-hover:text-gold ${
+                    location.pathname === link.path
+                      ? "text-gold"
+                      : "text-muted-foreground"
+                  }`}
+                  whileHover={{ y: -2 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  {link.name}
+                </motion.span>
+                {/* Animated underline */}
+                <motion.span
+                  className="absolute -bottom-1 left-0 w-full h-0.5 bg-gold origin-left"
+                  initial={{ scaleX: location.pathname === link.path ? 1 : 0 }}
+                  whileHover={{ scaleX: 1 }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
+                  style={{ scaleX: location.pathname === link.path ? 1 : 0 }}
+                />
               </Link>
             ))}
           </nav>
