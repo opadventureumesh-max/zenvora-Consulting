@@ -80,15 +80,10 @@ const ServicesOverview = () => {
                 y: -8,
                 transition: { duration: 0.3 }
               }}
-              className="group relative bg-card rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-border overflow-hidden hoverable"
+              className="group relative bg-card hover:bg-primary rounded-xl p-6 shadow-sm hover:shadow-xl transition-all duration-500 border border-border hover:border-gold overflow-hidden hoverable"
             >
-              {/* Animated gradient background on hover */}
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-br from-gold/20 via-gold/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                initial={{ x: "-100%", opacity: 0 }}
-                whileHover={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5 }}
-              />
+              {/* Animated gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-gold/0 via-gold/0 to-gold/0 group-hover:from-gold/10 group-hover:via-transparent group-hover:to-gold/5 transition-all duration-500" />
               
               {/* Sliding border effect */}
               <motion.div
@@ -104,12 +99,12 @@ const ServicesOverview = () => {
                   whileHover={{ rotate: [0, -10, 10, -10, 0], scale: 1.1 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <service.icon className="w-7 h-7 text-gold group-hover:text-secondary-foreground transition-colors duration-300" />
+                  <service.icon className="w-7 h-7 text-gold group-hover:text-primary transition-colors duration-300" />
                 </motion.div>
-                <h3 className="font-serif text-xl font-semibold text-foreground mb-2 group-hover:text-gold transition-colors duration-300">
+                <h3 className="font-serif text-xl font-semibold text-foreground group-hover:text-primary-foreground mb-2 transition-colors duration-300">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground group-hover:text-primary-foreground/80 text-sm leading-relaxed transition-colors duration-300">
                   {service.description}
                 </p>
               </div>
