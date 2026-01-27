@@ -2,10 +2,25 @@ import { Button } from "@/components/ui/button";
 import { Phone, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import heroBgVideo from "@/assets/hero-bg-video.mp4";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center bg-gradient-hero overflow-hidden">
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src={heroBgVideo} type="video/mp4" />
+      </video>
+      
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-gradient-hero opacity-90" />
+
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-72 h-72 bg-gold rounded-full blur-3xl" />
