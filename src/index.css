@@ -8,11 +8,11 @@
 
 @layer base {
   :root {
-    /* Core Background & Foreground */
-    --background: 210 20% 98%;
+    /* Core Background & Foreground - Professional Off-White */
+    --background: 220 20% 97%;
     --foreground: 222 47% 11%;
 
-    /* Card Surfaces */
+    /* Card Surfaces - Clean White with Warmth */
     --card: 0 0% 100%;
     --card-foreground: 222 47% 11%;
 
@@ -28,12 +28,12 @@
     --secondary: 40 90% 50%;
     --secondary-foreground: 222 47% 11%;
 
-    /* Muted */
-    --muted: 210 20% 96%;
-    --muted-foreground: 215 16% 47%;
+    /* Muted - Soft Gray with Blue Undertone */
+    --muted: 220 14% 94%;
+    --muted-foreground: 220 13% 46%;
 
-    /* Accent - Light Blue */
-    --accent: 210 100% 96%;
+    /* Accent - Premium Light Navy Tint */
+    --accent: 220 30% 95%;
     --accent-foreground: 222 47% 15%;
 
     /* Destructive */
