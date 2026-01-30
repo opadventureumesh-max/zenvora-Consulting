@@ -119,16 +119,12 @@ const Footer = () => {
             <div className="flex gap-6">
               <a 
                 href="/documents/privacy-policy.pdf" 
-                target="_blank" 
-                rel="noopener noreferrer"
                 className="text-sm text-primary-foreground/60 hover:text-gold transition-colors"
               >
                 Privacy Policy
               </a>
               <a 
                 href="/documents/terms-and-conditions.pdf" 
-                target="_blank" 
-                rel="noopener noreferrer"
                 className="text-sm text-primary-foreground/60 hover:text-gold transition-colors"
               >
                 Terms of Service
