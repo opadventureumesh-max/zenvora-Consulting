@@ -37,23 +37,15 @@ const Contact = () => {
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
-      const validatedData = contactSchema.parse(formData);
-      
-      // Simulate form submission
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for contacting us. We'll get back to you soon.",
-      });
-      
-      setFormData({ name: "", email: "", phone: "", message: "" });
+      contactSchema.parse(formData);
       setErrors({});
+      // Form will submit naturally via FormSubmit.co
+      (e.target as HTMLFormElement).submit();
     } catch (error) {
       if (error instanceof z.ZodError) {
         const newErrors: Record<string, string> = {};
@@ -63,15 +55,8 @@ const Contact = () => {
           }
         });
         setErrors(newErrors);
-      } else {
-        toast({
-          title: "Error",
-          description: "Something went wrong. Please try again.",
-          variant: "destructive",
-        });
+        setIsSubmitting(false);
       }
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
@@ -193,7 +178,16 @@ const Contact = () => {
               <h2 className="font-serif text-2xl font-bold text-foreground mb-6">
                 Send us a Message
               </h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form 
+                action="https://formsubmit.co/zenvoraconsulting@gmail.com" 
+                method="POST"
+                onSubmit={handleSubmit} 
+                className="space-y-6"
+              >
+                {/* FormSubmit.co configuration */}
+                <input type="hidden" name="_subject" value="New Contact Form Submission - Zenvora" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_template" value="table" />
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                     Your Name
