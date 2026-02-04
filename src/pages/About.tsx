@@ -193,7 +193,7 @@ const About = () => {
                 whileHover={{ y: -8 }}
                 className="group p-6 rounded-xl bg-card border border-border text-center hover:shadow-lg hover:bg-primary hover:border-gold/30 transition-all duration-300"
               >
-                <div className="w-24 h-24 mx-auto rounded-full bg-primary group-hover:bg-gold flex items-center justify-center mb-4 transition-colors duration-300 overflow-hidden">
+                <div className="w-24 h-24 mx-auto rounded-xl bg-primary group-hover:bg-gold flex items-center justify-center mb-4 transition-colors duration-300 overflow-hidden">
                   {member.photo ? (
                     <img 
                       src={member.photo} 
