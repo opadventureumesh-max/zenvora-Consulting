@@ -4,6 +4,7 @@ import SectionHeading from "@/components/common/SectionHeading";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Target, Eye, Phone } from "lucide-react";
+import umeshPhoto from "@/assets/team/umesh-farkade.jpg";
 
 const teamMembers = [
   {
@@ -11,30 +12,35 @@ const teamMembers = [
     role: "Founder",
     phone: "+91 88733 04211",
     image: "JP",
+    photo: null,
   },
   {
     name: "Umesh Farkade",
     role: "Executor Head",
     phone: "+91 82258 11142",
     image: "UF",
+    photo: umeshPhoto,
   },
   {
     name: "Ranjeet Chaurasiya",
     role: "Social Media Manager",
     phone: "+91 73248 40640",
     image: "RC",
+    photo: null,
   },
   {
     name: "Ankit Kumar",
     role: "Developer Team Head",
     phone: "+91 62079 88050",
     image: "AK",
+    photo: null,
   },
   {
     name: "Ishan Sharma",
     role: "Developer Team Head",
     phone: "+91 88396 24380",
     image: "IS",
+    photo: null,
   },
 ];
 
@@ -187,10 +193,18 @@ const About = () => {
                 whileHover={{ y: -8 }}
                 className="group p-6 rounded-xl bg-card border border-border text-center hover:shadow-lg hover:bg-primary hover:border-gold/30 transition-all duration-300"
               >
-                <div className="w-24 h-24 mx-auto rounded-full bg-primary group-hover:bg-gold flex items-center justify-center mb-4 transition-colors duration-300">
-                  <span className="text-2xl font-bold text-primary-foreground group-hover:text-secondary-foreground transition-colors duration-300">
-                    {member.image}
-                  </span>
+                <div className="w-24 h-24 mx-auto rounded-full bg-primary group-hover:bg-gold flex items-center justify-center mb-4 transition-colors duration-300 overflow-hidden">
+                  {member.photo ? (
+                    <img 
+                      src={member.photo} 
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <span className="text-2xl font-bold text-primary-foreground group-hover:text-secondary-foreground transition-colors duration-300">
+                      {member.image}
+                    </span>
+                  )}
                 </div>
                 <h3 className="font-serif text-xl font-semibold text-foreground group-hover:text-primary-foreground mb-1 transition-colors duration-300">
                   {member.name}
