@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Facebook, Instagram } from "lucide-react";
 import zenvoraLogo from "@/assets/zenvora-logo.png";
+import PrivacyPolicyDialog from "./PrivacyPolicyDialog";
 
 const services = [
   "Web & App Development",
@@ -20,6 +22,8 @@ const quickLinks = [
 ];
 
 const Footer = () => {
+  const [privacyOpen, setPrivacyOpen] = useState(false);
+
   return (
     <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-16">
@@ -117,12 +121,12 @@ const Footer = () => {
               © {new Date().getFullYear()} ZENVORA CONSULTING. All rights reserved.
             </p>
             <div className="flex gap-6">
-              <a 
-                href="/documents/privacy-policy.pdf" 
+              <button 
+                onClick={() => setPrivacyOpen(true)}
                 className="text-sm text-primary-foreground/60 hover:text-gold transition-colors"
               >
                 Privacy Policy
-              </a>
+              </button>
               <a 
                 href="/documents/terms-and-conditions.pdf" 
                 className="text-sm text-primary-foreground/60 hover:text-gold transition-colors"
@@ -133,6 +137,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <PrivacyPolicyDialog open={privacyOpen} onOpenChange={setPrivacyOpen} />
     </footer>
   );
 };
