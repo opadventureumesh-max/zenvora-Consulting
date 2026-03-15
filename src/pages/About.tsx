@@ -3,38 +3,48 @@ import Layout from "@/components/layout/Layout";
 import SectionHeading from "@/components/common/SectionHeading";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Target, Eye, Phone } from "lucide-react";
+import { ArrowRight, Target, Eye, Phone, Linkedin, Instagram, Twitter, Facebook } from "lucide-react";
 
 const teamMembers = [
   {
     name: "Jay Prakash Upadhyay",
     role: "Founder",
     phone: "+91 88733 04211",
-    image: "JP",
+    initials: "JP",
+    description: "Visionary leader with expertise in business strategy and consulting.",
+    social: { linkedin: "#", instagram: "#", twitter: "#", facebook: "#" },
   },
   {
     name: "Umesh Farkade",
     role: "Executor Head",
     phone: "+91 82258 11142",
-    image: "UF",
+    initials: "UF",
+    description: "Operations expert ensuring seamless project execution and delivery.",
+    social: { linkedin: "#", instagram: "#", twitter: "#", facebook: "#" },
   },
   {
     name: "Ranjeet Chaurasiya",
     role: "Social Media Manager",
     phone: "+91 73248 40640",
-    image: "RC",
+    initials: "RC",
+    description: "Creative strategist driving brand engagement across digital platforms.",
+    social: { linkedin: "#", instagram: "#", twitter: "#", facebook: "#" },
   },
   {
     name: "Ankit Kumar",
     role: "Developer Team Head",
     phone: "+91 62079 88050",
-    image: "AK",
+    initials: "AK",
+    description: "Full-stack developer leading innovative web and app solutions.",
+    social: { linkedin: "#", instagram: "#", twitter: "#", facebook: "#" },
   },
   {
     name: "Ishan Sharma",
     role: "Developer Team Head",
     phone: "+91 88396 24380",
-    image: "IS",
+    initials: "IS",
+    description: "Tech enthusiast specializing in scalable architecture and modern frameworks.",
+    social: { linkedin: "#", instagram: "#", twitter: "#", facebook: "#" },
   },
 ];
 
@@ -187,15 +197,40 @@ const About = () => {
                 whileHover={{ y: -8 }}
                 className="group p-6 rounded-xl bg-card border border-border text-center hover:shadow-lg hover:bg-primary hover:border-gold/30 transition-all duration-300"
               >
-                <div className="w-24 h-24 mx-auto rounded-full bg-primary group-hover:bg-gold flex items-center justify-center mb-4 transition-colors duration-300">
-                  <span className="text-2xl font-bold text-primary-foreground group-hover:text-secondary-foreground transition-colors duration-300">
-                    {member.image}
+                {/* Photo / Initials Avatar */}
+                <div className="w-28 h-28 mx-auto rounded-full bg-primary group-hover:bg-gold flex items-center justify-center mb-4 transition-colors duration-300 overflow-hidden">
+                  <span className="text-3xl font-bold text-primary-foreground group-hover:text-secondary-foreground transition-colors duration-300">
+                    {member.initials}
                   </span>
                 </div>
+
                 <h3 className="font-serif text-xl font-semibold text-foreground group-hover:text-primary-foreground mb-1 transition-colors duration-300">
                   {member.name}
                 </h3>
-                <p className="text-gold group-hover:text-gold text-sm mb-4 transition-colors duration-300">{member.role}</p>
+                <p className="text-gold text-sm mb-2 transition-colors duration-300">{member.role}</p>
+                
+                {/* Description */}
+                <p className="text-sm text-muted-foreground group-hover:text-primary-foreground/70 mb-4 transition-colors duration-300 line-clamp-2">
+                  {member.description}
+                </p>
+
+                {/* Social Media Icons */}
+                <div className="flex justify-center gap-3 mb-4">
+                  <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-muted group-hover:bg-primary-foreground/10 flex items-center justify-center text-muted-foreground group-hover:text-primary-foreground/70 hover:!text-gold transition-all">
+                    <Linkedin className="w-4 h-4" />
+                  </a>
+                  <a href={member.social.instagram} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-muted group-hover:bg-primary-foreground/10 flex items-center justify-center text-muted-foreground group-hover:text-primary-foreground/70 hover:!text-gold transition-all">
+                    <Instagram className="w-4 h-4" />
+                  </a>
+                  <a href={member.social.twitter} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-muted group-hover:bg-primary-foreground/10 flex items-center justify-center text-muted-foreground group-hover:text-primary-foreground/70 hover:!text-gold transition-all">
+                    <Twitter className="w-4 h-4" />
+                  </a>
+                  <a href={member.social.facebook} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-muted group-hover:bg-primary-foreground/10 flex items-center justify-center text-muted-foreground group-hover:text-primary-foreground/70 hover:!text-gold transition-all">
+                    <Facebook className="w-4 h-4" />
+                  </a>
+                </div>
+
+                {/* Phone */}
                 <a
                   href={`tel:${member.phone.replace(/\s/g, "")}`}
                   className="inline-flex items-center gap-2 text-sm text-muted-foreground group-hover:text-primary-foreground/70 hover:text-gold transition-colors"
