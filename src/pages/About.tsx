@@ -216,16 +216,16 @@ const About = () => {
 
                 {/* Social Media Icons */}
                 <div className="flex justify-center gap-3 mb-4">
-                  <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-muted group-hover:bg-primary-foreground/10 flex items-center justify-center text-muted-foreground group-hover:text-primary-foreground/70 hover:!text-gold transition-all">
+                  <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-muted group-hover:bg-primary-foreground/10 flex items-center justify-center text-[#0A66C2] hover:scale-110 transition-all">
                     <Linkedin className="w-4 h-4" />
                   </a>
-                  <a href={member.social.instagram} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-muted group-hover:bg-primary-foreground/10 flex items-center justify-center text-muted-foreground group-hover:text-primary-foreground/70 hover:!text-gold transition-all">
+                  <a href={member.social.instagram} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-muted group-hover:bg-primary-foreground/10 flex items-center justify-center text-[#E4405F] hover:scale-110 transition-all">
                     <Instagram className="w-4 h-4" />
                   </a>
-                  <a href={member.social.twitter} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-muted group-hover:bg-primary-foreground/10 flex items-center justify-center text-muted-foreground group-hover:text-primary-foreground/70 hover:!text-gold transition-all">
+                  <a href={member.social.twitter} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-muted group-hover:bg-primary-foreground/10 flex items-center justify-center text-[#1DA1F2] hover:scale-110 transition-all">
                     <Twitter className="w-4 h-4" />
                   </a>
-                  <a href={member.social.facebook} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-muted group-hover:bg-primary-foreground/10 flex items-center justify-center text-muted-foreground group-hover:text-primary-foreground/70 hover:!text-gold transition-all">
+                  <a href={member.social.facebook} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-muted group-hover:bg-primary-foreground/10 flex items-center justify-center text-[#1877F2] hover:scale-110 transition-all">
                     <Facebook className="w-4 h-4" />
                   </a>
                 </div>
