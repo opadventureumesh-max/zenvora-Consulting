@@ -201,9 +201,13 @@ const About = () => {
               >
                 {/* Photo / Initials Avatar */}
                 <div className="w-28 h-28 mx-auto rounded-full bg-primary group-hover:bg-gold flex items-center justify-center mb-4 transition-colors duration-300 overflow-hidden">
-                  <span className="text-3xl font-bold text-primary-foreground group-hover:text-secondary-foreground transition-colors duration-300">
-                    {member.initials}
-                  </span>
+                  {member.photo ? (
+                    <img src={member.photo} alt={member.name} className="w-full h-full object-cover" />
+                  ) : (
+                    <span className="text-3xl font-bold text-primary-foreground group-hover:text-secondary-foreground transition-colors duration-300">
+                      {member.initials}
+                    </span>
+                  )}
                 </div>
 
                 <h3 className="font-serif text-xl font-semibold text-foreground group-hover:text-primary-foreground mb-1 transition-colors duration-300">
