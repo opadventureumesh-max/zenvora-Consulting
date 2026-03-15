@@ -197,15 +197,40 @@ const About = () => {
                 whileHover={{ y: -8 }}
                 className="group p-6 rounded-xl bg-card border border-border text-center hover:shadow-lg hover:bg-primary hover:border-gold/30 transition-all duration-300"
               >
-                <div className="w-24 h-24 mx-auto rounded-full bg-primary group-hover:bg-gold flex items-center justify-center mb-4 transition-colors duration-300">
-                  <span className="text-2xl font-bold text-primary-foreground group-hover:text-secondary-foreground transition-colors duration-300">
-                    {member.image}
+                {/* Photo / Initials Avatar */}
+                <div className="w-28 h-28 mx-auto rounded-full bg-primary group-hover:bg-gold flex items-center justify-center mb-4 transition-colors duration-300 overflow-hidden">
+                  <span className="text-3xl font-bold text-primary-foreground group-hover:text-secondary-foreground transition-colors duration-300">
+                    {member.initials}
                   </span>
                 </div>
+
                 <h3 className="font-serif text-xl font-semibold text-foreground group-hover:text-primary-foreground mb-1 transition-colors duration-300">
                   {member.name}
                 </h3>
-                <p className="text-gold group-hover:text-gold text-sm mb-4 transition-colors duration-300">{member.role}</p>
+                <p className="text-gold text-sm mb-2 transition-colors duration-300">{member.role}</p>
+                
+                {/* Description */}
+                <p className="text-sm text-muted-foreground group-hover:text-primary-foreground/70 mb-4 transition-colors duration-300 line-clamp-2">
+                  {member.description}
+                </p>
+
+                {/* Social Media Icons */}
+                <div className="flex justify-center gap-3 mb-4">
+                  <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-muted group-hover:bg-primary-foreground/10 flex items-center justify-center text-muted-foreground group-hover:text-primary-foreground/70 hover:!text-gold transition-all">
+                    <Linkedin className="w-4 h-4" />
+                  </a>
+                  <a href={member.social.instagram} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-muted group-hover:bg-primary-foreground/10 flex items-center justify-center text-muted-foreground group-hover:text-primary-foreground/70 hover:!text-gold transition-all">
+                    <Instagram className="w-4 h-4" />
+                  </a>
+                  <a href={member.social.twitter} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-muted group-hover:bg-primary-foreground/10 flex items-center justify-center text-muted-foreground group-hover:text-primary-foreground/70 hover:!text-gold transition-all">
+                    <Twitter className="w-4 h-4" />
+                  </a>
+                  <a href={member.social.facebook} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-muted group-hover:bg-primary-foreground/10 flex items-center justify-center text-muted-foreground group-hover:text-primary-foreground/70 hover:!text-gold transition-all">
+                    <Facebook className="w-4 h-4" />
+                  </a>
+                </div>
+
+                {/* Phone */}
                 <a
                   href={`tel:${member.phone.replace(/\s/g, "")}`}
                   className="inline-flex items-center gap-2 text-sm text-muted-foreground group-hover:text-primary-foreground/70 hover:text-gold transition-colors"
