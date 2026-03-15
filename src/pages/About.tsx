@@ -3,7 +3,7 @@ import Layout from "@/components/layout/Layout";
 import SectionHeading from "@/components/common/SectionHeading";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Target, Eye, Phone } from "lucide-react";
+import { ArrowRight, Target, Eye, Phone, Linkedin, Instagram, Twitter, Facebook } from "lucide-react";
 
 const teamMembers = [
   {
