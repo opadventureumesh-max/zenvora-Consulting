@@ -4,6 +4,7 @@ import SectionHeading from "@/components/common/SectionHeading";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Target, Eye, Phone, Linkedin, Instagram, Twitter, Facebook } from "lucide-react";
+import teamDemoPhoto from "@/assets/team-demo.jpg";
 
 const teamMembers = [
   {
@@ -11,6 +12,7 @@ const teamMembers = [
     role: "Founder",
     phone: "+91 88733 04211",
     initials: "JP",
+    photo: teamDemoPhoto,
     description: "Visionary leader with expertise in business strategy and consulting.",
     social: { linkedin: "#", instagram: "#", twitter: "#", facebook: "#" },
   },
@@ -199,9 +201,13 @@ const About = () => {
               >
                 {/* Photo / Initials Avatar */}
                 <div className="w-28 h-28 mx-auto rounded-full bg-primary group-hover:bg-gold flex items-center justify-center mb-4 transition-colors duration-300 overflow-hidden">
-                  <span className="text-3xl font-bold text-primary-foreground group-hover:text-secondary-foreground transition-colors duration-300">
-                    {member.initials}
-                  </span>
+                  {member.photo ? (
+                    <img src={member.photo} alt={member.name} className="w-full h-full object-cover" />
+                  ) : (
+                    <span className="text-3xl font-bold text-primary-foreground group-hover:text-secondary-foreground transition-colors duration-300">
+                      {member.initials}
+                    </span>
+                  )}
                 </div>
 
                 <h3 className="font-serif text-xl font-semibold text-foreground group-hover:text-primary-foreground mb-1 transition-colors duration-300">
