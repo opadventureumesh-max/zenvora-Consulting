@@ -197,53 +197,57 @@ const About = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 whileHover={{ y: -8 }}
-                className="group p-6 rounded-xl bg-card border border-border text-center hover:shadow-lg hover:bg-primary hover:border-gold/30 transition-all duration-300"
+                className="group rounded-xl bg-card border border-border overflow-hidden hover:shadow-lg hover:border-gold/30 transition-all duration-300"
               >
-                {/* Photo / Initials Avatar */}
-                <div className="w-28 h-28 mx-auto rounded-full bg-primary group-hover:bg-gold flex items-center justify-center mb-4 transition-colors duration-300 overflow-hidden">
+                {/* Photo Frame */}
+                <div className="w-full aspect-[4/3] bg-muted overflow-hidden">
                   {member.photo ? (
-                    <img src={member.photo} alt={member.name} className="w-full h-full object-cover" />
+                    <img src={member.photo} alt={member.name} className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
                   ) : (
-                    <span className="text-3xl font-bold text-primary-foreground group-hover:text-secondary-foreground transition-colors duration-300">
-                      {member.initials}
-                    </span>
+                    <div className="w-full h-full bg-primary flex items-center justify-center">
+                      <span className="text-5xl font-bold text-primary-foreground">
+                        {member.initials}
+                      </span>
+                    </div>
                   )}
                 </div>
 
-                <h3 className="font-serif text-xl font-semibold text-foreground group-hover:text-primary-foreground mb-1 transition-colors duration-300">
-                  {member.name}
-                </h3>
-                <p className="text-gold text-sm mb-2 transition-colors duration-300">{member.role}</p>
-                
-                {/* Description */}
-                <p className="text-sm text-muted-foreground group-hover:text-primary-foreground/70 mb-4 transition-colors duration-300 line-clamp-2">
-                  {member.description}
-                </p>
+                {/* Info Section */}
+                <div className="p-6 text-center">
+                  <h3 className="font-serif text-xl font-semibold text-foreground mb-1 transition-colors duration-300">
+                    {member.name}
+                  </h3>
+                  <p className="text-gold text-sm font-medium mb-2">{member.role}</p>
+                  
+                  <p className="text-sm text-muted-foreground mb-4 line-clamp-2">
+                    {member.description}
+                  </p>
 
-                {/* Social Media Icons */}
-                <div className="flex justify-center gap-3 mb-4">
-                  <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-muted group-hover:bg-primary-foreground/10 flex items-center justify-center text-[#0A66C2] hover:scale-110 transition-all">
-                    <Linkedin className="w-4 h-4" />
-                  </a>
-                  <a href={member.social.instagram} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-muted group-hover:bg-primary-foreground/10 flex items-center justify-center text-[#E4405F] hover:scale-110 transition-all">
-                    <Instagram className="w-4 h-4" />
-                  </a>
-                  <a href={member.social.twitter} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-muted group-hover:bg-primary-foreground/10 flex items-center justify-center text-[#1DA1F2] hover:scale-110 transition-all">
-                    <Twitter className="w-4 h-4" />
-                  </a>
-                  <a href={member.social.facebook} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-muted group-hover:bg-primary-foreground/10 flex items-center justify-center text-[#1877F2] hover:scale-110 transition-all">
-                    <Facebook className="w-4 h-4" />
+                  {/* Social Media Icons */}
+                  <div className="flex justify-center gap-3 mb-4">
+                    <a href={member.social.linkedin} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-muted flex items-center justify-center text-[#0A66C2] hover:scale-110 transition-all">
+                      <Linkedin className="w-4 h-4" />
+                    </a>
+                    <a href={member.social.instagram} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-muted flex items-center justify-center text-[#E4405F] hover:scale-110 transition-all">
+                      <Instagram className="w-4 h-4" />
+                    </a>
+                    <a href={member.social.twitter} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-muted flex items-center justify-center text-[#1DA1F2] hover:scale-110 transition-all">
+                      <Twitter className="w-4 h-4" />
+                    </a>
+                    <a href={member.social.facebook} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-muted flex items-center justify-center text-[#1877F2] hover:scale-110 transition-all">
+                      <Facebook className="w-4 h-4" />
+                    </a>
+                  </div>
+
+                  {/* Phone */}
+                  <a
+                    href={`tel:${member.phone.replace(/\s/g, "")}`}
+                    className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-gold transition-colors"
+                  >
+                    <Phone className="w-4 h-4" />
+                    {member.phone}
                   </a>
                 </div>
-
-                {/* Phone */}
-                <a
-                  href={`tel:${member.phone.replace(/\s/g, "")}`}
-                  className="inline-flex items-center gap-2 text-sm text-muted-foreground group-hover:text-primary-foreground/70 hover:text-gold transition-colors"
-                >
-                  <Phone className="w-4 h-4" />
-                  {member.phone}
-                </a>
               </motion.div>
             ))}
           </div>
